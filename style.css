@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #08001f, #30197d);
+    color: #fff;
+    position: relative;
+}
+.container{
+    width: 800px;
+    height: 180px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.clock{
+    width: 100%;
+    height: 100%;
+    background: rgba(235, 0, 255, 0.11);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(40px);
+}
+.container::before{
+    content: '';
+    width: 180px;
+    height: 180px;
+    background: purple;
+    border-radius: 5px;
+    position: absolute;
+    left: -50px;
+    top: -50px;
+    z-index: -1;
+}
+.container::after{
+    content: '';
+    width: 180px;
+    height: 250px;
+    background: orange;
+    border-radius: 50%;
+    position: absolute;
+    right: -30px;
+    bottom: -50px;
+    z-index: -1;
+}
+#hrs,#min,#sec{
+    font-size: 100px;
+    width: 200px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+.clock span::after{
+    font-size: 16x;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+.clock{
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+    gap:40px;
+    width:800px;
+    height:220px;
+}
+
+.clock div{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+
+#hrs,#min,#sec{
+    font-size:100px;
+    font-weight:650;
+    line-height:1;
+}
+
+.colon{
+    font-size:80px;
+    font-weight:600;
+    margin-top:-20px;
+}
+
+.label{
+    font-size:16px;
+    font-weight:500;
+    letter-spacing:2px;
+    margin-top:10px;
+    right:100px;
+    left:10px;
+    align-items:center;
+    display:block;
+    text-align:center;
+}
+#hrs::after{
+    content: "HOURS";
+}
+
+#min::after{
+    content: "MIN";
+}
+
+#sec::after{
+    content: "SEC";
+}
+
+#hrs::after,
+#min::after,
+#sec::after{
+    font-size:30px;
+    position:absolute;
+    bottom:-50px;
+    left:55%;
+    width:55px;
+    align-items:center;
+    display:block;
+    transform:translateX(-50%);
+}
